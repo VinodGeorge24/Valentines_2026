@@ -1,0 +1,146 @@
+1. Core User Experience
+Initial Screen
+
+Display centered text:
+“Marlene, would you be my valentine?”
+
+Below the text, show two buttons:
+
+Yes
+
+No
+
+The page should be clean, centered, and mobile-friendly.
+
+2. Button Logic
+Yes Button
+
+Clicking Yes at any time should replace the entire screen with this message (formatted cleanly, centered):
+
+Great choice! Look forward to:
+
+Date at I Gemelli  
+Outfit: Something FORMAL!  
+Time: 5 PM date, be ready before!  
+What to Bring: just yo ahh :)
+
+THANK YOU SOOO MUCH <3
+
+
+When Yes is clicked:
+
+Clear localStorage so that refreshing or reopening the page resets the experience back to the beginning.
+
+No Button
+
+Each time No is clicked:
+
+Increase the size of the Yes button by 1.25x
+
+Re-render the same screen
+
+Save the number of No clicks to localStorage
+
+The Yes button scaling should follow this formula:
+
+scale = 1.25 ^ noClickCount
+
+The No button can stay the same size.
+
+3. Maximum No Click Behavior
+
+After 5 No clicks:
+
+The page text should change to:
+
+“MARLENE BE MY VALENTINE!”
+
+The No button should be removed
+
+Only the enlarged Yes button remains
+
+The Yes button should remain scaled up by 1.25x for each No click (5 total times).
+
+4. Persistence (localStorage)
+
+Store noClickCount in localStorage
+
+On page load:
+
+Read noClickCount
+
+Apply correct Yes button size
+
+Show or hide No button accordingly
+
+Show correct text based on count:
+
+0–4 No clicks:
+“Marlene, would you be my valentine?”
+
+5+ No clicks:
+“MARLENE BE MY VALENTINE!”
+
+Cap noClickCount at 5 (do not allow further growth beyond 5)
+
+5. Technical Requirements
+
+Output should be a single HTML file:
+
+Inline CSS
+
+Inline JavaScript
+
+No external libraries
+
+Clean, readable code
+
+Works on mobile and desktop
+
+Center content vertically and horizontally
+
+Buttons should have smooth scale animation when resizing (CSS transition)
+
+6. File Output
+
+Cursor should output:
+
+index.html
+
+Containing:
+
+HTML structure
+
+Embedded <style> for layout + buttons
+
+Embedded <script> for logic + localStorage
+
+7. UI Style (Light Guidance)
+
+Soft, cute vibe
+
+Large readable text
+
+Rounded buttons
+
+Slight hover effect on buttons
+
+No complicated visuals
+
+8. Success Criteria
+
+Refreshing the page preserves progress until Yes is clicked
+
+After Yes is clicked, refresh resets to original state
+
+After 5 No clicks, No button disappears and text changes
+
+Yes button grows correctly each time
+
+No errors in console
+
+Works by simply opening the HTML file in a browser
+
+9. Final Instruction to Agent
+
+Generate the complete working index.html file that fulfills all requirements above. Do not include explanations. Only output the final HTML file content
